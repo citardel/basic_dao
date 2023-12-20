@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "basic_dao_backend": {
+      "main": "src/basic_dao_backend/main.mo",
+      "type": "motoko"
+    },
+    "basic_dao_frontend": {
+      "dependencies": [
+        "basic_dao_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/basic_dao_frontend/src/index.html"
+      },
+      "source": [
+        "src/basic_dao_frontend/assets",
+        "dist/basic_dao_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
